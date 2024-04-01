@@ -9,7 +9,11 @@
         h1 {text-align: center;}
         p {text-align:  center;}
     }
-
+    .mitte {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
     #hauptbox {
         border: purple 5px groove;
         height: 100px;
@@ -27,6 +31,12 @@
         left: 0;
         pointer-events:none;
     }
+
+    #toten {
+        padding-top: 1rem
+
+    }
+
 </style>
 <script>
     function bounceImage() {
@@ -61,8 +71,7 @@
 </script>
 </head>
 <body onload="bounceImage()">
-    <img id="skull" src="https://sternedernacht.neocities.org/gifs/skull.gif" width="300">
-
+    <img id="skull" src="https://sternedernacht.neocities.org/gifs/skull.gif" width="300"> 
     <div id="trenner1">
         <img src="https://sternedernacht.neocities.org/gifs/transpa.png" class="mitte"
         width="500rem">
@@ -71,6 +80,11 @@
     <div id="hauptbox">
         <p><i>error 404</i></p>
         <p><i>if you see this, one of us fucked up</i></p>
+    </div>
+
+    <div id="toten">
+        <a target="_blank" href="https://www.effedupmovies.com/nekromantik-2-1991/">
+        <img src="https://sternedernacht.neocities.org/gifs/smoking-skull.png" class="mitte"></a>
     </div>
 </body>
 </html>
