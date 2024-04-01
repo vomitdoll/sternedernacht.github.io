@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+    html {
+        background-image:url(https://sternedernacht.neocities.org/gifs/fireblu.gif);
+        color: white;
+        h1 {text-align: center;}
+        p {text-align:  center;}
+    }
+
+    #hauptbox {
+        border: purple 5px groove;
+        height: 100px;
+        width: 260px;
+        margin: auto;
+        padding-top: 10px;
+        background-image: url(https://sternedernacht.neocities.org/gifs/blood.gif)
+        
+
+    }
+    
+    #skull {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events:none;
+    }
+</style>
+<script>
+    function bounceImage() {
+        var skull = document.getElementById("skull");
+        var xPos = 0;
+        var yPos = 0;
+        var xSpeed = 5; 
+        var ySpeed = 5; 
+        
+
+
+        setInterval(function() {
+            var containerWidth = window.innerWidth - skull.offsetWidth;
+            var containerHeight = window.innerHeight - skull.offsetHeight;
+
+         
+            xPos += xSpeed;
+            yPos += ySpeed;
+
+            if (xPos <= 0 || xPos >= containerWidth) {
+                xSpeed *= -1;
+            }
+
+            if (yPos <= 0 || yPos >= containerHeight) {
+                ySpeed *= -1;
+            }
+
+            skull.style.left = xPos + "px";
+            skull.style.top = yPos + "px";
+        }, 10);
+    }
+</script>
+</head>
+<body onload="bounceImage()">
+    <img id="skull" src="https://sternedernacht.neocities.org/gifs/skull.gif" width="300">
+
+    <div id="trenner1">
+        <img src="https://sternedernacht.neocities.org/gifs/transpa.png" class="mitte"
+        width="500rem">
+    </div>
+
+    <div id="hauptbox">
+        <p><i>error 404</i></p>
+        <p><i>if you see this, one of us fucked up</i></p>
+    </div>
+</body>
+</html>
